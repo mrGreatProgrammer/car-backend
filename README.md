@@ -82,7 +82,7 @@ The application will be available at [http://localhost:8080](http://localhost:80
 
 ### Contacts
 
-If you have any questions or suggestions about the project, please contact me via email at [karimovbezhan0@gmail.com](mailto:karimovbezhan0@gmail.com).
+If you have any questions or suggestions about the project, please contact me via email at [karimovbezan0@gmail.com](mailto:karimovbezhan0@gmail.com).
 
 ---
 
