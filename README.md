@@ -8,29 +8,29 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mrGreatProgrammer/car-backend)
 ![GitHub User's stars](https://img.shields.io/github/stars/mrGreatProgrammer?style=social)
 
-Проект "Car" предназначен для объявления автомобилей на продажу. Пользователи могут добавлять информацию о своих автомобилях, которые они хотят продать, а другие пользователи могут просматривать эти объявления.
+The "Car" project is designed for listing cars for sale. Users can add information about their cars they want to sell, and other users can browse these listings.
 
-## Технологии
+## Technologies
 
-### Бэкенд
+### Backend
 
-- **Язык программирования**: Go
-- **Веб-фреймворк**: Gin
+- **Programming Language**: Go
+- **Web Framework**: Gin
 - **ORM**: GORM
-- **СУБД**: PostgreSQL
+- **Database**: PostgreSQL
 
-## Установка и запуск
+## Installation and Launch
 
-### Шаг 1: Клонирование репозитория
+### Step 1: Clone the repository
 
 ```sh
 git clone https://github.com/bezhan2009/car.git
 cd car
 ```
 
-### Шаг 2: Настройка конфигурации
+### Step 2: Configure settings
 
-Создайте файл `config.go` и добавьте в него следующие настройки:
+Create a file named `config.go` and add the following settings:
 
 ```go
 package main
@@ -54,34 +54,34 @@ func LoadConfig() Config {
 }
 ```
 
-### Шаг 3: Установка зависимостей
+### Step 3: Install dependencies
 
-Установите необходимые зависимости с помощью команды:
+Install the necessary dependencies using the command:
 
 ```sh
 go mod tidy
 ```
 
-### Шаг 4: Запуск приложения
+### Step 4: Launch the application
 
-Запустите приложение:
+Run the application:
 
 ```sh
 go run main.go
 ```
 
-Приложение будет доступно по адресу [http://localhost:8080](http://localhost:8080).
+The application will be available at [http://localhost:8080](http://localhost:8080).
 
-## Основные функции
+## Main Features
 
-- Добавление нового объявления о продаже автомобиля
-- Просмотр списка объявлений
-- Поиск объявлений по различным критериям
+- Add a new car listing for sale
+- View the list of car listings
+- Search car listings by various criteria
 
-### Контакты
+### Contacts
 
-Если у вас есть вопросы или предложения по проекту, пожалуйста, свяжитесь со мной по электронной почте [karimovbezhan0@gmail.com](mailto:karimovbezhan0@gmail.com).
+If you have any questions or suggestions about the project, please contact me via email at [karimovbezhan0@gmail.com](mailto:karimovbezhan0@gmail.com).
 
 ---
 
-Спасибо за использование проекта "Car"! Надеюсь, он будет полезен для вас.
+Thank you for using the "Car" project! I hope it will be useful to you.
