@@ -41,5 +41,8 @@ func InitDatabase() {
 	}
 
 	// Применение миграций
-	DB.AutoMigrate(&Car{}, &User{})
+	err = DB.AutoMigrate(&Car{}, &User{})
+	if err != nil {
+		fmt.Println("failed to migrate database Error:", err)
+	}
 }
