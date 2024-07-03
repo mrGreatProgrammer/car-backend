@@ -8,6 +8,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mrGreatProgrammer/car-backend)
 ![GitHub User's stars](https://img.shields.io/github/stars/mrGreatProgrammer?style=social)
 
+Read in [Русский](README.ru.md)
+
 The "Car" project is designed for listing cars for sale. Users can add information about their cars they want to sell, and other users can browse these listings.
 
 ## Technologies
