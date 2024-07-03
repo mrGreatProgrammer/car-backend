@@ -1,20 +1,40 @@
 package main
 
 import (
-    "github.com/gin-gonic/gin"
-    "net/http"
+    "fmt"
+    "my-gin-project/routes"
+    "gorm.io/driver/postgres"
+    "gorm.io/gorm"
 )
 
+var db *gorm.DB
+
 func main() {
-    router := gin.Default()
+    config := LoadConfig()
 
-    // Пример простого маршрута
-    router.GET("/ping", func(c *gin.Context) {
-        c.JSON(http.StatusOK, gin.H{
-            "message": "pong",
-        })
-    })
+    // Формирование строки подключения к PostgreSQL
+    dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Tashkent",
+        config.DBHost, config.DBUser, config.DBPassword, config.DBName, config.DBPort)
 
-    // Запуск сервера на порту 8080
-    router.Run(":8080")
+    // Подключение к базе данных
+    var err error
+    db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
+    if err != nil {
+        panic("failed to connect database")
+    }
+
+    // Закрытие соединения с базой данных при выходе из приложения
+    defer db.Close()
+
+    // Применение миграций (опционально)
+    // db.AutoMigrate(&models.User{})
+
+    // Инициализация маршрутов
+    router := routes.SetupRouter()
+
+    // Запуск сервера
+    err = router.Run(":8080")
+    if err != nil {
+        fmt.Println(err)
+    }
 }
