@@ -81,7 +81,7 @@ go run main.go
 
 ### Контакты
 
-Если у вас есть вопросы или предложения по проекту, пожалуйста, свяжитесь со мной по электронной почте [karimovbezhan0@gmail.com](mailto:karimovbezhan0@gmail.com).
+Если у вас есть вопросы или предложения по проекту, пожалуйста, свяжитесь со мной по электронной почте [karimovbezhan0@gmail.com](mailto:karimovbezan0@gmail.com).
 
 ---
 
