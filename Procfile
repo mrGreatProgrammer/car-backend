@@ -1,1 +1,1 @@
-web: gunicorn ToDoMany.wsgi --log-file -
+web: gunicorn AetherEShop.wsgi --log-file -
