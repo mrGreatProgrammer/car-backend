@@ -1,89 +1,66 @@
 
-# Car
+![GitHub top language](https://img.shields.io/github/languages/top/bezhan2009/Aether)
+![GitHub language count](https://img.shields.io/github/languages/count/bezhan2009/Aether)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/bezhan2009/Aether)
+![GitHub repo size](https://img.shields.io/github/repo-size/bezhan2009/Aether)
+![GitHub](https://img.shields.io/github/license/bezhan2009/Aether)
+![GitHub last commit](https://img.shields.io/github/last-commit/bezhan2009/Aether)
+![GitHub User's stars](https://img.shields.io/github/stars/bezhan2009?style=social)
+<br>
+<br>
+![Python](https://img.shields.io/badge/python-3.12-blue)
+![Django](https://img.shields.io/badge/django-latest-brightgreen)
 
-![GitHub top language](https://img.shields.io/github/languages/top/mrGreatProgrammer/car-backend) 
-![GitHub language count](https://img.shields.io/github/languages/count/mrGreatProgrammer/car-backend)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mrGreatProgrammer/car-backend)
-![GitHub repo size](https://img.shields.io/github/repo-size/mrGreatProgrammer/car-backend) 
-![GitHub last commit](https://img.shields.io/github/last-commit/mrGreatProgrammer/car-backend)
-![GitHub User's stars](https://img.shields.io/github/stars/mrGreatProgrammer?style=social)
+# Aether
 
-Read in [Русский](README.ru.md)
+Aether - это учебный проект интернет-магазина, разработанный в рамках курсов. Он не предназначен для коммерческого использования, а создавался с целью изучения основных принципов создания Web-приложений.
 
-The "Car" project is designed for listing cars for sale. Users can add information about their cars they want to sell, and other users can browse these listings.
+## Описание проекта
 
-## Technologies
+Aether имеет все основные функции настоящих интернет-магазинов, такие как:
 
-### Backend
+- Регистрация и аутентификация пользователей.
+- Просмотр каталога товаров с возможностью фильтрации и поиска.
+- Добавление товаров в корзину.
+- Оформление заказов.
+- Административный раздел для управления товарами, заказами и пользователями.
 
-- **Programming Language**: Go
-- **Web Framework**: Gin
-- **ORM**: GORM
-- **Database**: PostgreSQL
+## Структура проекта
 
-## Installation and Launch
+Проект разделен на несколько подприложений:
 
-### Step 1: Clone the repository
+1. **userapp**: Отвечает за регистрацию, аутентификацию и профили пользователей.
+2. **productapp**: Управление товарами и категориями.
+3. **categoryapp**: Управление категориями товаров.
+4. **commentapp**: Управление комментариями к товарам.
+5. **orderapp**: Управление заказами и статусами доставки.
+6. **payapp**: Обработка платежей.
+7. **reviewapp**: Управление отзывами о товарах.
+8. **addressapp**: Управление адресами доставки.
 
-```sh
-git clone https://github.com/bezhan2009/car.git
-cd car
-```
 
-### Step 2: Configure settings
+## Технологии
+- **Python**: Мощный и универсальный язык программирования, широко используемый для веб-разработки, научных вычислений, анализа данных и многих других целей.
 
-Create a file named `config.go` and add the following settings:
+- **Django**: Высокоуровневый веб-фреймворк на Python, предоставляющий набор инструментов для быстрой разработки веб-приложений, включая ORM (Object-Relational Mapping) для работы с базами данных, систему маршрутизации URL, систему аутентификации и многое другое.
 
-```go
-package main
+- **Django REST Framework (DRF)**: Мощный набор инструментов для создания веб-API на основе Django. Он предоставляет сериализацию и десериализацию данных, обработку запросов, аутентификацию, разрешение различных типов запросов и многое другое, делая процесс создания веб-API быстрым и удобным.
 
-type Config struct {
-    DBName     string
-    DBUser     string
-    DBPassword string
-    DBHost     string
-    DBPort     string
-}
+- **drf-yasg**: Библиотека для генерации интерактивной документации к вашему веб-API на основе DRF. Она автоматически создает Swagger UI для вашего API, позволяя разработчикам легко понять его структуру и использование.
 
-func LoadConfig() Config {
-    return Config{
-        DBName:     "mydatabase",
-        DBUser:     "postgres",
-        DBPassword: "password",
-        DBHost:     "localhost",
-        DBPort:     "5432",
-    }
-}
-```
+- **PostgreSQL**: Мощная реляционная база данных с открытым исходным кодом, известная своей надежностью, производительностью и расширяемостью. PostgreSQL широко используется в веб-разработке для хранения данных приложений.
 
-### Step 3: Install dependencies
+- **simple_jwt**: Простая библиотека для добавления аутентификации JSON Web Token (JWT) в приложения Django. JWT - это компактный и самодостаточный способ представления информации об аутентификации между двумя сторонами в виде объекта JSON, который может использоваться для аутентификации пользователей в веб-приложениях.
 
-Install the necessary dependencies using the command:
+Эти технологии вместе обеспечивают создание мощного и функционального веб-приложения на основе Django, который обладает RESTful API, внушительной документацией и безопасной аутентификацией.
 
-```sh
-go mod tidy
-```
+## Установка и запуск
 
-### Step 4: Launch the application
+Чтобы запустить проект локально, выполните следующие шаги:
 
-Run the application:
-
-```sh
-go run main.go
-```
-
-The application will be available at [http://localhost:8080](http://localhost:8080).
-
-## Main Features
-
-- Add a new car listing for sale
-- View the list of car listings
-- Search car listings by various criteria
-
-### Contacts
-
-If you have any questions or suggestions about the project, please contact me via email at [karimovbezan0@gmail.com](mailto:karimovbezhan0@gmail.com).
-
----
-
-Thank you for using the "Car" project! I hope it will be useful to you.
+1. Склонируйте репозиторий на локальную машину.
+2. Установите зависимости, используя `pip install -r requirements.txt`.
+3. Примените миграции базы данных: `python manage.py migrate`.
+4. Создайте суперпользователя: `python manage.py createsuperuser`.
+5. Запустите сервер: `python manage.py runserver`.
+6. Перейдите по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/) в вашем браузере.
