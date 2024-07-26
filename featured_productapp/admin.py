@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import FeaturedProduct
+from .models import FeaturedCar
 
-admin.site.register(FeaturedProduct)
+admin.site.register(FeaturedCar)

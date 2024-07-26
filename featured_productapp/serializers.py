@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from featured_productapp.models import FeaturedProduct
+from featured_productapp.models import FeaturedCar
 
 
-class FeaturesProductSerializer(serializers.ModelSerializer):
+class FeaturesCarSerializer(serializers.ModelSerializer):
     class Meta:
-        model = FeaturedProduct
+        model = FeaturedCar
         fields = '__all__'
